@@ -10,7 +10,7 @@
             <th scope="col">#</th>
             <th scope="col">Tên khóa học</th>
             <th scope="col">Trình độ</th>
-            <th scope="col" colspan="2">Thời gian tạo</th>
+            <th scope="col" colspan="2">Thời gian xóa</th>
             </tr>
         </thead>
         <tbody>
@@ -19,7 +19,7 @@
                     <th scope="row">{{sum @index 1}}</th>
                     <td>{{this.name}}</td>
                     <td>{{this.level}}</td>
-                    <td>{{this.createdAt}}</td>
+                    <td>{{this.deletedAt}}</td>
                     <td>
                         <a href="" type="button" class="btn btn-link btn-restore" data-bs-id="{{this._id}}">Khôi phục</a>
                         <a href="" type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-course-modal">Xóa vĩnh viễn</a>
@@ -46,7 +46,6 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Hành động này không thể khôi phục. Bạn vẫn muốn xóa khóa học này?</p>
       </div>
       <div class="modal-footer">
         <button id="btn-delete-course" type="button" class="btn btn-danger">Xóa vĩnh viễn</button>
